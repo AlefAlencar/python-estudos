@@ -26,7 +26,7 @@ print(list(itertools.combinations(A, 4)))
 # Combinacoes incluindo o próprio elemento
 print('combincations_with_replacement:\n',
       list(itertools.combinations_with_replacement([1, 2, 3], 2)))
-print(list(itertools.combinations_with_replacement('aaeee', 2)))
+print(list(itertools.combinations_with_replacement('aaeee', 2)))'''
 # GROUPBY fabrica um iterador que retorna consecutivas chaves e grupos de um iterável.
 chaves = []
 grupos = []
