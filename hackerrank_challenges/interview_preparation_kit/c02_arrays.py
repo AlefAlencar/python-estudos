@@ -76,10 +76,49 @@ for _ in range(int(input())):
     min_bribes(q)  # '''
 
 
-# 5/5 Minimun Swaps 2 (medium)
-def minimum_swaps(a):
+# 5/5 Minimun Swaps 2 (medium)  {1ªsubmissao: 6/15, 6pontos; 2ª: 10/15, 20p, 3ª: 15/15}
+'''def minimum_swaps(arr):
+    # swaps = 0
+    # # arr = [_-1 for _ in arr]
+    # for i, n in enumerate(arr):  # posicao atual
+    #     if i == n-1:  # ve se estah na posicao certa
+    #         continue
+    #     im = i  # indice do menor valor
+    #     for j in range(i, len(arr)):  # procura o menor valor que vem depois do elemento atual
+    #         # compara o entao menor com o seguinte. se este for menor, salva seu indice
+    #         if arr[j] < arr[im]:
+    #             im = j
+    #     arr[i], arr[im] = arr[im], arr[i]  # SWAP
+    #     swaps += 1
+    # return swaps
 
-    return a
+    # swaps, size = 0, len(arr)
+    # for i in range(size):
+    #     if arr[i] == i+1:
+    #         continue
+    #     arr[i], arr[arr[i]-1] = arr[arr[i]-1], arr[i]
+    #     swaps += 1
+    #     i -= 1
+    # print(arr)
+    # return swaps
 
-_, arr = input(), list(map(int, input().split()))
-print(minimum_swaps(arr))
+    count = 0
+    i = 0
+    while i < len(arr):
+        print(f'{arr[i]} != {i+1}?', end=' ')
+        if arr[i] != i+1:
+            while arr[i] != i+1:
+                temp = arr[arr[i]-1]
+                arr[arr[i]-1] = arr[i]
+                arr[i] = temp
+                count += 1
+        i += 1
+    return count
+
+
+for _ in range(int(input())):
+    size, arra = input(), list(map(int, input().split()))
+    print('\n', minimum_swaps(arra), 'swaps')  # '''
+
+
+# 5/5 Array Manipulation (hard)
