@@ -72,10 +72,44 @@ for _ in range(int(input())):
 
 
 # 3/5 Sherlock and Anagrams (medium)
+import itertools
+
+
 def sherlock_and_anagrams(s):
+    s = list(s)
+    lss = {}
+    i = 0
+    while i < len(s):
+        j = len(s)
+        while i != j:
+            ss = sorted(s[i:j])
+            ss = ''.join(ss)
+            print(ss)
+            if ss in lss:
+                lss[ss] += 1
+            else:
+                lss[ss] = 1
+            j -= 1
+        i += 1
+
+    c = 0
+    for k, v in lss.items():
+        print(k, ':', v)
+        c += v//2
+    print()
+    print(c, lss)
     return
 
 
 for _ in range(int(input())):
     st = input()
     sherlock_and_anagrams(st)
+
+'''
+5
+abba
+abcd
+cdcd
+ifailuhkqq
+kkkk
+'''

@@ -13,7 +13,7 @@ A = [[1, 2, 3], ['a', 'b', 'c']]
 print(list(itertools.product(*A)))
 B = [[1, 2, 3], ['a', 'b', 'c'], ['¹', '²', '³']]
 print(list(itertools.product(*B)))
-# PREMUTAÇÃO é uma técnica de contagem utilizada para determinar
+# PERMUTAÇÃO é uma técnica de contagem utilizada para determinar
 # quantas maneiras existem para ordenar os elementos de um conjunto finito.
 print(list(itertools.permutations([1, 2, 3])))
 print(list(itertools.permutations([1, 2, 3], 2)))
