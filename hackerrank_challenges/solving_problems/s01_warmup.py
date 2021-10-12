@@ -1,6 +1,6 @@
 """
-DESAFIOS HACKERRANK
-Algoritmos:
+HACKERRANK
+Algoritmhs:
 1. Warm-up
 """
 
