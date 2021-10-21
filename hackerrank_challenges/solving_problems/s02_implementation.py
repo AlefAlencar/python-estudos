@@ -76,9 +76,18 @@ v2 = int(first_multiple_input[3])
 print(kangaroo(x1, v1, x2, v2))  # '''
 
 
-# 4 Between Two Sets  ***NOT SOLVED***
-'''def getTotalX(a, b):
-    return
+# 4 Between Two Sets  {1º 1/9failed 8.57/10pts;}
+# 1. descobrir os múltiplos comuns que estão entre as matrizes
+# 2. descobrir quais dos múltiplos comuns são comuns a segunda matriz
+# 3. retornar quantos são esses múltiplos
+'''from math import lcm, gcd
+def getTotalX(a, b):
+    x = lcm(*a)
+    y = gcd(*b)
+    n = 0
+    for i in range(x, y+1):
+        n += y % i == 0
+    return x, y, n
 
 
 first_multiple_input = input().rstrip().split()
@@ -165,11 +174,18 @@ arr = list(map(int, input().rstrip().split()))
 print(migratory_birds(arr))  # '''
 
 
-# 9 Day of the Programmer
+# 9 Day of the Programmer {1ª 10/61failed 12/15pts; }
 def day_of_programmer(year):    # Write your code here
-
-    return
+    if year < 1918:
+        return f'12.09.{year}'
+    elif year % 400 == 0 or (year % 4 == 0 and year % 100 != 0):
+        return f'12.09.{year}'
+    else:
+        return f'13.09.{year}'
 
 
 year = int(input().strip())
-print(day_of_programmer(year))
+print(day_of_programmer(year))  # '''
+
+
+# 10
