@@ -188,4 +188,25 @@ year = int(input().strip())
 print(day_of_programmer(year))  # '''
 
 
-# 10
+# 10 Electronics Shop
+'''def get_money_spent(keyboards, drives, b):    # Write your code here.
+    ms = 0
+    for k in keyboards:
+        for d in drives:
+            x = k + d
+            if b >= x > ms:
+                ms = x
+    if ms == 0:
+        return -1
+    else:
+        return ms
+
+
+b, n, m = input().split()
+keyboards = list(map(int, input().rstrip().split()))
+drives = list(map(int, input().rstrip().split()))
+
+print(get_money_spent(keyboards, drives, b))  # '''
+
+
+# 11
