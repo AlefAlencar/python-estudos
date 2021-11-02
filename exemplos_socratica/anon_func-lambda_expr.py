@@ -4,7 +4,7 @@ Do canal gringo Socratica, alguns exemplos de:
 FUNÇÕES ANÔNIMAS/EXPRESSÕES LAMBDA
 """
 
-'''# ==========
+# ==========
 def f(x):
     return 3*x + 1
 

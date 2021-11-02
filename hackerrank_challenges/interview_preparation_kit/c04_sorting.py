@@ -5,7 +5,7 @@ HACKERRANK preparação para entrevista
 
 
 # Sorting: Bubble Sort
-def count_swaps(a):    # Write your code here
+'''def count_swaps(a):
     c = 0
     for i in range(len(a)):
         for j in range(len(a)-1):
@@ -21,3 +21,22 @@ def count_swaps(a):    # Write your code here
 n = int(input().strip())
 a = list(map(int, input().rstrip().split()))
 count_swaps(a)  # '''
+
+
+# Mark and Toys
+def maximum_toys(prices, k):
+    prices.sort()
+    i = c = 0
+    for p in prices:
+        if i + p > k:
+            break
+        i += p
+        c += 1
+    return c
+
+
+n, k = list(map(int, input().rstrip().split()))
+prices = list(map(int, input().rstrip().split()))
+print(maximum_toys(prices, k))  # '''
+
+#
